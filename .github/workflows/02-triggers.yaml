@@ -1,14 +1,14 @@
-name: triggers
-on: 
-  workflow_dispatch: 
-  #push  # triggers the workflow on the every push to the repository
+# name: triggers
+# on: 
+#   workflow_dispatch: 
+#   #push  # triggers the workflow on the every push to the repository
 
-jobs:
-  trigger:
-    runs-on: ubuntu-latest
-    steps:
-      - name: manually dispatched
-        run: echo "manually dispatched"
+# jobs:
+#   trigger:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: manually dispatched
+#         run: echo "manually dispatched"
 
 
 name: triggers
