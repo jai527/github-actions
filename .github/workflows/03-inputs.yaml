@@ -1,0 +1,29 @@
+name: inputs-demo
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Select Environment'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - qa
+          - prod
+
+      tags:
+        description: 'Enable tags'
+        required: false
+        type: boolean
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Inputs
+        run: |
+          echo "Environment: ${{ inputs.environment }}"
+          echo "Tags: ${{ inputs.tags }}"
