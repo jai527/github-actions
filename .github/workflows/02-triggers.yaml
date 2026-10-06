@@ -1,5 +1,5 @@
 name: triggers
-on: workflow dispatch 
+on: workflow dispatch: 
   #push  # triggers the workflow on the every push to the repository
 
 jobs:
