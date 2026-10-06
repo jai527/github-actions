@@ -15,7 +15,7 @@ name: triggers
 on:
   push:
     branches:
-      - 'feature*'
+      - 'main'
   #workflow_dispatch: 
   #push  # triggers the workflow on the every push to the repository
 
@@ -23,5 +23,5 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - name: feature branches push
-        run: echo "feature branche push"
+      - name: main branches push
+        run: echo "main branche push"
