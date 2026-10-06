@@ -1,9 +1,31 @@
 name: context demo
 on:
   push
+env:
+  project: "roboshop"
+  environment: "dev"
+  component: "catalogue"
+
 jobs:
-  context:
+  github-context:
     runs-on: ubuntu-latest
     steps:
-      - name: context
-        run: echo '${{ toJson(github) }}'
+      - name: Print info  
+        run: |   
+          echo '${{ toJson(github) }}'
+          echo "branche name: ${{ github.ref_name }}"
+
+      - name: access env variables
+        run: |
+          echo "project: $project"
+          echo "environment: $environment"
+          echo "component: $component"
+
+      - name: Print secrets
+        run: |
+          echo "DB USER name: ${{ secrets.DB_USER }}"
+          echo "DB PASSWORD ${{ secrets.DB_PASSWORD }}"
+      
+
+
+  
