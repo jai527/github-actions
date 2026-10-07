@@ -49,8 +49,8 @@ jobs:
       
       - name: Print github env outputs
         run: |
-          echo "course: $course" >>GITHUB_OUTPUT
-          echo "duration: $duration" >>GITHUB_OUTPUT
+          echo "course: $course"
+          echo "duration: $duration"
       
 
 
