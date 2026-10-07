@@ -1,15 +1,17 @@
 name: condition demo
-on: 
+
+on:
   push:
 
 jobs:
-  say- hello: 
+  say-hello:
     runs-on: ubuntu-latest
+
     steps:
-    - name: main branche
-      if: "{{ github.ref_name == 'main' }}"
-      run: echo "this one exicute if branche is main"
-  
-    - name: future branche
-      if: "{{ github.ref_name == 'future' }}"
-      run: echo "this one exicute if branche is future"
+      - name: main branch
+        if: github.ref_name == 'main'
+        run: echo "this one executes if branch is main"
+
+      - name: future branch
+        if: github.ref_name == 'future'
+        run: echo "this one executes if branch is future"
