@@ -67,5 +67,14 @@ jobs:
           echo "image_name: ${{ needs.github-context.outputs.image_name }}"
           echo "version: ${{ needs.github-context.outputs.version }}"
 
+  sacn:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: run sonnar sacn
+        run: echo "sonnar scan"
+
+      - name: Print job context
+        run: |
+          echo "${{toJson(job) }}"
   
