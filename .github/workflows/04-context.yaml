@@ -39,8 +39,8 @@ jobs:
 
       - name: Print previous step GITHUB_OUTPUT
         run: |
-          echo "image tags ${{ steps.tag.outputs.image-name }}"
-          echo "image tags ${{ steps.tag.outputs.version }}"
+          echo "image name ${{ steps.tag.outputs.image-name }}"
+          echo "version ${{ steps.tag.outputs.version }}"
       
 
 
