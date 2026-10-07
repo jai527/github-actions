@@ -26,6 +26,10 @@ jobs:
           echo "DB USER name: ${{ secrets.DB_USER }}"
           echo "DB PASSWORD ${{ secrets.DB_PASSWORD }}"
       
+      - name: Print variables
+        run: |
+          echo "DB URL: ${{ vars.DB_URL}}"
+      
 
 
   
