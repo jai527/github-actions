@@ -10,9 +10,9 @@ jobs:
   github-context:
     runs-on: ubuntu-latest
 
-  outputs:
-    image_name: ${{ steps.tag.outputs.image_name }}
-    version: ${{ steps.tag.outputs.version }}
+    outputs:
+      image_name: ${{ steps.tag.outputs.image_name }}
+      version: ${{ steps.tag.outputs.version }}
     
     steps:
       - name: Print info  
