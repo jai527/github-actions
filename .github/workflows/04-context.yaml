@@ -39,7 +39,7 @@ jobs:
 
       - name: Print previous step outputs
         run: |
-          echo "image name: ${{ steps.tag.outputs.image-name }}"
+          echo "image name: ${{ steps.tag.outputs.image_name }}"
           echo "version: ${{ steps.tag.outputs.version }}"
       
       - name: Github env
