@@ -1,6 +1,6 @@
 name: context demo
 on:
-  push
+  push:
 env:
   project: "roboshop"
   environment: "dev"
@@ -12,7 +12,7 @@ jobs:
 
   outputs:
     image_name: ${{ steps.tag.outputs.image_name }}
-    version: ${{ step.tag.outputs.version }}
+    version: ${{ steps.tag.outputs.version }}
     
     steps:
       - name: Print info  
