@@ -1,11 +1,13 @@
-name: future-pipeline 
-on: 
+
+name: future-pipeline
+
+on:
   push:
 
 jobs:
   feature-pipeline:
-    uses: jai527/workflows/.github/workflow.nodejs-future-pipeline.yaml@main
+    uses: jai527/workflows/.github/workflows/nodejs-future-pipeline.yaml@main
     with:
-      project: 'roboshop'
-      component: 'catalogue'
-      environment: 'dev'
+      project: "roboshop"
+      component: "catalogue"
+      environment: "dev"
