@@ -5,11 +5,11 @@ on:
 jobs:
   say- hello: 
     runs-on: ubuntu-latest
-  steps:
-  - name: main branche
-    if: github.ref_name == 'main'
-    run: echo "this one exicute if branche is main"
+    steps:
+    - name: main branche
+      if: github.ref_name == 'main'
+      run: echo "this one exicute if branche is main"
   
-  - name: future branche
-    if: github.ref_name == 'future'
-    run: echo "this one exicute if branche is future"
+    - name: future branche
+      if: github.ref_name == 'future'
+      run: echo "this one exicute if branche is future"
