@@ -8,6 +8,10 @@ env:
 
 jobs:
   github-context:
+  outputs:
+    image_name: ${{ steps.tag.outputs.image_name }}
+    version: ${{ step.tag.outputs.version }}
+    
     runs-on: ubuntu-latest
     steps:
       - name: Print info  
@@ -41,7 +45,8 @@ jobs:
         run: |
           echo "image name: ${{ steps.tag.outputs.image_name }}"
           echo "version: ${{ steps.tag.outputs.version }}"
-      
+
+      # use full with in the job 
       - name: Github env
         run: |
           echo "course=github-actions" >> $GITHUB_ENV
@@ -51,7 +56,15 @@ jobs:
         run: |
           echo "course: $course"
           echo "duration: $duration"
-      
+  
+  deploy:
+    runs-on: ubuntu-latest
+    needs: github-context   # depends on the above job 
+    steps:
+      - name: Print github env in to another job 
+        run: |
+          echo "image_name: ${{ needs.github-context.outputs.image_name }}"
+          echo "version: ${{ needs.github-context.outputs.version }}"
 
 
   
