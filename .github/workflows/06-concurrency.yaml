@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest # Github hosted runners 
     steps:
       - name: Print Hello World
-        run: sleep 60 # this command to executed 
+        run: sleep 60 # this command to executed  
