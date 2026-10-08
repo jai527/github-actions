@@ -1,7 +1,7 @@
 name: future-pipeline
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   feature-pipeline:
